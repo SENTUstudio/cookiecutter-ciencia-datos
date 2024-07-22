@@ -2,7 +2,7 @@
   <a href="" rel="noopener">
  <img src="docs/assets/img/fondo.png" alt="Project logo"></a>
 </p>
-<h3 align="center">Project Title</h3>
+<h3 align="center">Cookie Cutter para Ciencia de Datos e Ingeniería de Datos</h3>
 
 <div align="center">
 
@@ -14,34 +14,20 @@
 
 </div>
 
----
+📝 Table of Contents
 
-<p align="center"> Few lines describing your project.
-    <br> 
-</p>
+- [¿Por qué?](#por-qué)
+- [Herramientas usadas en el proyecto](#herramientas-usadas-en-el-proyecto)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Cómo usar este proyecto](#cómo-usar-este-proyecto)
 
-## 📝 Table of Contents
+> Nota: Esta plantilla usa **poetry**. Si prefiere usar pip, vaya a la rama [dvc-pip]([https://](https://github.com/khuyentran1401/data-science-template/tree/dvc-pip)) en su lugar.
 
-- [Proyectos para SENTU.studio](#proyectos-para-sentustudio)
-- [Estudiando el proyecto de @datasciencesimplifed](#estudiando-el-proyecto-de-datasciencesimplifed)
-  - [Herramientas usadas en el proyecto](#herramientas-usadas-en-el-proyecto)
-  - [Estructura del Proyecto](#estructura-del-proyecto)
+## ¿Por qué?
 
+Es importante estructurar su proyecto de ciencia de datos en función de un cierto estándar para que sus compañeros de equipo puedan mantener y modificar fácilmente su proyecto.
 
-Proyectos para SENTU.studio
-===========================
-----------------------------------------
-
-La mejor forma de estructurar un proyecto de ciencia de datos para que sea manejable, mantenible y escalable
-
-1. cookiecutter data science
-
-- [ ] Revisar el proyecto de @datasciencesimplifed https://www.youtube.com/watch?v=TzvcPi3nsdw
-- [ ] Proyecto de drivendata.org tiene buena estructura y un paquete final. Es bueno tomarlo como referencia https://cookiecutter-data-science.drivendata.org/
-
-Estudiando el proyecto de @datasciencesimplifed
-===============================================
-----------------------------------------------------------------------
+Este repositorio proporciona una plantilla que incorpora las mejores prácticas para crear un proyecto de ciencia de datos mantenible y reproducible.
 
 
 ## Herramientas usadas en el proyecto
@@ -55,34 +41,47 @@ Estudiando el proyecto de @datasciencesimplifed
 
 ```bash
 .
-├── config                      
-│   ├── main.yaml                   # Main configuration file
-│   ├── model                       # Configurations for training model
-│   │   ├── model1.yaml             # First variation of parameters to train model
-│   │   └── model2.yaml             # Second variation of parameters to train model
-│   └── process                     # Configurations for processing data
-│       ├── process1.yaml           # First variation of parameters to process data
-│       └── process2.yaml           # Second variation of parameters to process data
-├── data            
-│   ├── final                       # data after training the model
-│   ├── processed                   # data after processing
-│   ├── raw                         # raw data
-│   └── raw.dvc                     # DVC file of data/raw
-├── docs                            # documentation for your project
-├── .gitignore                      # ignore files that cannot commit to Git
-├── Makefile                        # store useful commands to set up the environment
-├── models                          # store models
-├── notebooks                       # store notebooks
-├── .pre-commit-config.yaml         # configurations for pre-commit
-├── pyproject.toml                  # dependencies for poetry
-├── README.md                       # describe your project
-├── src                             # store source code
-│   ├── __init__.py                 # make src a Python module 
-│   ├── process.py                  # process data before training model
-│   └── train_model.py              # train model
-└── tests                           # store tests
-    ├── __init__.py                 # make tests a Python module 
-    ├── test_process.py             # test functions for process.py
-    └── test_train_model.py         # test functions for train_model.py
+├── config
+│   ├── main.yaml             # Archivo de configuración principal
+│   ├── model                 # Configuraciones para el modelo de entrenamiento
+│   │   ├── model1.yaml       # Primera variación de los parámetros para entrenar el modelo
+│   │   └── model2.yaml       # Segunda variación de los parámetros para entrenar el modelo
+│   └── process               # Configuraciones para procesar datos
+│       ├── process1.yaml     # Primera variación de los parámetros para procesar datos
+│       └── process2.yaml     # Segunda variación de los parámetros para procesar datos
+├── data
+│   ├── final                 # datos después de entrenar el modelo
+│   ├── processed             # datos después del procesamiento
+│   ├── raw                   # Datos sin procesar
+│   └── raw.dvc               # Archivo dvc de datos/bruto
+├── docs                      # Documentación para su proyecto
+├── .gitignore                # Ignorar archivos que no pueden comprometerse con GIT
+├── Makefile                  # Almacene comandos útiles para configurar el entorno
+├── models                    # Modelos de almacenamiento
+├── notebooks                 # almacenar notebooks
+├── .pre-commit-config.yaml   # Configuraciones para pre-Commit
+├── pyproject.toml            # Dependencias para la poetry
+├── README.md                 # Describe tu proyecto
+├── src                       # almacenar código fuente
+│   ├── __init__.py           # Haz de SRC un módulo Python
+│   ├── process.py            # Datos de proceso antes del modelo de capacitación
+│   └── train_model.py        # modelo de tren
+└── tests                     # Pruebas de almacenamiento
+    ├── __init__.py           # hacer las pruebas un módulo de python
+    ├── test_process.py       # Funciones de prueba para process.py
+    └── test_train_model.py   # Funciones de prueba para Train_Model.py
 ```
 
+## Cómo usar este proyecto
+
+Instalar Cookiecutter:
+
+```shell
+pip install cookiecutter
+```
+
+Crear un proyecto basado en la plantilla:
+
+```shell
+cookiecutter https://github.com/SENTUstudio/cookiecutter-ciencia-datos --checkout dvc-poetry
+```
