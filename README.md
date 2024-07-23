@@ -6,7 +6,7 @@
 
 <div align="center">
 
-[![Hackathon](https://img.shields.io/badge/cookie_cutter_ciencia_datos-name-orange.svg)](https://sentustudio.github.io/)
+[![Hackathon](https://img.shields.io/badge/cookie_cutter_ciencia_datos-web-orange.svg)](https://sentustudio.github.io/)
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
 [![GitHub Issues](https://img.shields.io/github/issues/SENTUstudio/cookiecutter-ciencia-datos.svg)](https://github.com/SENTUstudio/cookiecutter-ciencia-datos/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/SENTUstudio/cookiecutter-ciencia-datos.svg)](https://github.com/SENTUstudio/cookiecutter-ciencia-datos/pulls)
