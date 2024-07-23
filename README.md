@@ -33,7 +33,7 @@ Este repositorio proporciona una plantilla que incorpora las mejores prácticas 
 * Hydra: administrador de configuración de archivos
 * pre-commit plugins: Automatizar el formato de revisión de código
 * DVC: Contro de versión de datos
-* pdoc: Cree automáticamente una documentación API para su proyecto
+* Material-mkdocs: Cree automáticamente una documentación API para su proyecto
 
 ## Estructura del Proyecto
 
