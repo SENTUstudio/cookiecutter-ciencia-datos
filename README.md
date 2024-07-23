@@ -29,11 +29,11 @@ Este repositorio proporciona una plantilla que incorpora las mejores prácticas 
 
 
 ## Herramientas usadas en el proyecto
-* Poetry: administrador de dependencia
-* Hydra: administrador de configuración de archivos
-* pre-commit plugins: Automatizar el formato de revisión de código
-* DVC: Contro de versión de datos
-* Material-mkdocs: Cree automáticamente una documentación API para su proyecto
+* [Poetry]([https://](https://python-poetry.org/)): administrador de dependencia
+* [Hydra]([https://](https://hydra.cc/)): administrador de configuración de archivos
+* [pre-commit plugins]([https://](https://pre-commit.com/)): Automatizar el formato de revisión de código
+* [DVC]([https://](https://dvc.org/)): Contro de versión de datos
+* [mkdocs-material]([https://](https://squidfunk.github.io/mkdocs-material/)): Cree automáticamente una documentación API para su proyecto
 
 ## Estructura del Proyecto
 
