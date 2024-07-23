@@ -81,5 +81,5 @@ pip install cookiecutter
 Crear un proyecto basado en la plantilla:
 
 ```shell
-cookiecutter https://github.com/SENTUstudio/cookiecutter-ciencia-datos --checkout dvc-poetry
+cookiecutter https://github.com/SENTUstudio/cookiecutter-ciencia-datos --checkout main
 ```
