@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img src="docs/assets/img/fondo.png" alt="Project logo"></a>
+ <img src="docs/assets/img/repository-open-graph-template.png" alt="Project logo"></a>
 </p>
 <h3 align="center">Cookie Cutter para Ciencia de Datos e Ingeniería de Datos</h3>
 
