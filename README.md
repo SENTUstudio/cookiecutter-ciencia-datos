@@ -6,22 +6,20 @@
 
 <div align="center">
 
-[![Hackathon](https://img.shields.io/badge/hackathon-name-orange.svg)](http://hackathon.url.com)
+[![Hackathon](https://img.shields.io/badge/cookie_cutter_ciencia_datos-name-orange.svg)](https://sentustudio.github.io/)
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
+[![GitHub Issues](https://img.shields.io/github/issues/SENTUstudio/cookiecutter-ciencia-datos.svg)](https://github.com/SENTUstudio/cookiecutter-ciencia-datos/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/SENTUstudio/cookiecutter-ciencia-datos.svg)](https://github.com/SENTUstudio/cookiecutter-ciencia-datos/pulls)
+[![License](https://img.shields.io/github/license/SENTUstudio/cookiecutter-ciencia-datos.svg)](LICENSE.md)
 
 </div>
 
-📝 Table of Contents
+📝 Tabla de contenido
 
 - [¿Por qué?](#por-qué)
 - [Herramientas usadas en el proyecto](#herramientas-usadas-en-el-proyecto)
 - [Estructura del Proyecto](#estructura-del-proyecto)
 - [Cómo usar este proyecto](#cómo-usar-este-proyecto)
-
-> Nota: Esta plantilla usa **poetry**. Si prefiere usar pip, vaya a la rama [dvc-pip]([https://](https://github.com/khuyentran1401/data-science-template/tree/dvc-pip)) en su lugar.
 
 ## ¿Por qué?
 
