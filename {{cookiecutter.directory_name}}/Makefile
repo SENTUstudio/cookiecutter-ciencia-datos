@@ -10,6 +10,7 @@ bluef := $(shell tput setaf 4)
 
 # Logo del proyecto
 logo:
+	clear
 	@printf "\n"
 	@printf " ${boldon}${yellowf}█▀ █▀▀ █▄░█ ▀█▀ █░█${reset}  ┎┤ Ciencia de Datos          ├┒\n"
 	@printf " ${boldon}${yellowf}▄█ ██▄ █░▀█ ░█░ █▄█${reset}  ┖┤ con ${boldon}Python${reset} en ${boldon}${reset} Archlinux ├┚\n"
@@ -23,27 +24,27 @@ help: logo
 	awk 'BEGIN {FS = ":.*?##"}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}' | \
 	sort
 
-## Instalación de dependencias
-dependencies: ## Inicializa Git y instala dependencias con Poetry
+## Inicializa Git y instala dependencias con Poetry
+dependencies: logo
 	@echo "Inicializando Git..."
-	@git init
+	git init
 	@echo "Instalación de dependencias..."
-	@poetry install --no-root
-	@poetry run pre-commit install
+	poetry install --no-root
+	poetry run pre-commit install
 
-## Activar el entorno virtual
-env: dependencies ## Activa el entorno virtual con Poetry
+## Activa el entorno virtual con Poetry
+env: logo dependencies
 	@echo "Activando el entorno virtual..."
-	@poetry shell
+	poetry shell
 
-## Ejecuta rutina de pruebas
-tests: ## Ejecuta pruebas con pytest
+## Ejecuta pruebas con pytest
+tests: logo
 	@echo "Ejecutando pruebas..."
-	@poetry run pytest
+	poetry run pytest
 
-## Construye y levanta la documentación en Mkdocs
-docs: ## Construye y sirve la documentación con MkDocs
+## Construye y sirve la documentación con MkDocs
+docs: logo
 	@echo "Construyendo cache de la documentación..."
-	@mkdocs build
+	mkdocs build
 	@echo "Sirviendo la documentación..."
-	@mkdocs serve
+	mkdocs serve
