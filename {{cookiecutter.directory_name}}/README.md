@@ -2,7 +2,7 @@
   <a href="" rel="noopener">
  <img src="docs/assets/img/fondo.png" alt="Project logo"></a>
 </p>
-<h3 align="center">{{cookiecutter.directory_name}}</h3>
+<h3 align="center">aurora-ai</h3>
 
 <div align="center">
 
@@ -27,6 +27,9 @@
 - [Instalar dependencias](#instalar-dependencias)
 - [Versión de sus datos](#versión-de-sus-datos)
 - [Documentación de API de generación automática](#documentación-de-api-de-generación-automática)
+- [Script de Gestión de Proyecto en Python](#script-de-gestión-de-proyecto-en-python)
+  - [Explicación del Script](#explicación-del-script)
+  - [Uso del Script](#uso-del-script)
 
 ## Herramientas utilizadas en este proyecto
 * [Poetry](https://towardsdatascience.com/how-to-effortlessly-publish-your-python-package-to-pypi-using-poetry-44b305362f9f): Gestión de dependencia - [article](https://mathdatasimplified.com/2023/06/12/poetry-a-better-way-to-manage-python-dependencies/)
@@ -69,7 +72,7 @@ git commit -m "add data"
 
 Para empujar los datos al almacenamiento remoto, escriba:
 ```bash
-dvc push 
+dvc push
 ```
 
 ## Documentación de API de generación automática
@@ -78,4 +81,42 @@ Para generar un documento API de generación automática para su proyecto, ejecu
 
 ```bash
 make docs
+```
+
+Voy a convertir tu `Makefile` en un script de gestión de proyecto en Python. Este script incluirá todas las funcionalidades del `Makefile`, como la inicialización de Git, la creación y activación del entorno Conda, la instalación de dependencias, la ejecución de pruebas, la construcción y el servicio de la documentación, y el manejo de la base de datos con Docker Compose.
+
+## Script de Gestión de Proyecto en Python
+
+### Explicación del Script
+
+- **`run_command(command, capture_output=False)`**: Ejecuta un comando en el shell y captura la salida si es necesario.
+- **`activate_conda()`**: Activa el entorno `conda`.
+- **`install_pre_commit()`**: Instala `pre-commit`.
+- **`init_git()`**: Inicializa un repositorio Git.
+- **`create_conda_env()`**: Crea el entorno `conda` y activa `pre-commit`.
+- **`show_logo()`**: Muestra el logo del proyecto.
+- **`help()`**: Muestra la ayuda con los comandos disponibles.
+- **`run_tests()`**: Ejecuta pruebas con `pytest`.
+- **`build_docs()`**: Construye y sirve la documentación con `MkDocs`.
+- **`db_up()`**: Levanta la base de datos PostgreSQL con Docker Compose.
+- **`db_down()`**: Detiene la base de datos PostgreSQL.
+
+### Uso del Script
+
+1. **Haz ejecutable el script** (opcional, pero recomendado en sistemas Unix):
+
+```sh
+chmod +x manage.py
+```
+
+2. **Ejecuta el script con el comando deseado**:
+
+```sh
+python manage.py init
+python manage.py env
+python manage.py tests
+python manage.py docs
+python manage.py db-up
+python manage.py db-down
+python manage.py help
 ```
