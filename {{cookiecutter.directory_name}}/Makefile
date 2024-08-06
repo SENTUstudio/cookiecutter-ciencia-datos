@@ -1,7 +1,7 @@
 # Control de proyecto de Datos
 
 .DEFAULT_GOAL := help
-
+PROJECT_DIR := $(CURDIR)
 # Colores y formato
 boldon := $(shell tput bold)
 reset := $(shell tput sgr0)
@@ -31,7 +31,7 @@ ini: logo
 	git branch -m main
 	@echo "Instalación de dependencias..."
 	conda env create --prefix ./env --file environment.yml
-	conda activate {{ cookiecutter.project_dir }}/env
+	conda activate "$(PROJECT_DIR)/env"
 	pre-commit install
 
 ## Activa el entorno virtual con Anaconda
