@@ -30,7 +30,7 @@ ini: logo
 	git init
 	git branch -m main
 	@echo "Instalación de dependencias..."
-	conda env create --prefix ./env --file environment.yml --force
+	conda env create --prefix ./env --file environment.yml
 	conda activate ./env
 	pre-commit install
 
@@ -38,11 +38,6 @@ ini: logo
 env: logo
 	@echo "Activando el entorno virtual..."
 	conda activate ./env
-
-## Removiendo entorno conda
-remove-env: logo
-	@echo "Removiendo entorno conda"
-	conda remove --name {{ cookiecutter.directory_name }} --all
 
 ## Ejecuta pruebas con pytest
 tests: logo
