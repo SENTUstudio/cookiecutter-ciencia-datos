@@ -24,7 +24,7 @@ help: logo
 	awk 'BEGIN {FS = ":.*?##"}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}' | \
 	sort
 
-## Inicializa Git y instala dependencias con Poetry
+## Inicializa Git y instala dependencias con Anaconda
 ini: logo
 	@echo "Inicializando Git..."
 	git init
@@ -34,7 +34,7 @@ ini: logo
 	conda activate ./env
 	pre-commit install
 
-## Activa el entorno virtual con Poetry
+## Activa el entorno virtual con Anaconda
 env: logo
 	@echo "Activando el entorno virtual..."
 	conda activate ./env
