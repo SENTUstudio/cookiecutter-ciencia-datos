@@ -30,14 +30,14 @@ ini: logo
 	git init
 	git branch -m main
 	@echo "Instalación de dependencias..."
-	conda env create -f environment.yml
-	conda activate {{ cookiecutter.directory_name }}
+	conda env create --prefix ./env --file environment.yml --force
+	conda activate ./env
 	pre-commit install
 
 ## Activa el entorno virtual con Poetry
 env: logo
 	@echo "Activando el entorno virtual..."
-	conda activate {{ cookiecutter.directory_name }}
+	conda activate ./env
 
 ## Removiendo entorno conda
 remove-env: logo
