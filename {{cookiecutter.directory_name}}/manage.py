@@ -100,9 +100,7 @@ def db_down():
 def print_activate_command():
     """Print the command to activate the conda environment."""
     print("Para activar el entorno Conda, ejecuta el siguiente comando en tu terminal:")
-    print(
-        f'\033[1meval "$(conda shell.bash hook)" && conda activate "{CONDA_ENV}"\033[0m'
-    )
+    print("\033[1meval conda activate ./env\033[0m")
 
 
 def main():
