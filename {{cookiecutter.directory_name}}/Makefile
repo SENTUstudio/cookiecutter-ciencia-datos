@@ -29,18 +29,18 @@ dependencies: logo
 	@echo "Inicializando Git..."
 	git init
 	@echo "Instalación de dependencias..."
-	poetry install --no-root
-	poetry run pre-commit install
+	conda env create -f environment.yml
+	pre-commit install
 
 ## Activa el entorno virtual con Poetry
 env: logo dependencies
 	@echo "Activando el entorno virtual..."
-	poetry shell
+	conda activate {{ cookiecutter.directory_name }}
 
 ## Ejecuta pruebas con pytest
 tests: logo
 	@echo "Ejecutando pruebas..."
-	poetry run pytest
+	pytest
 
 ## Construye y sirve la documentación con MkDocs
 docs: logo

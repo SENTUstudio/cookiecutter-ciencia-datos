@@ -1,0 +1,18 @@
+name: {{ cookiecutter.directory_name }}
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python={{ cookiecutter.compatible_python_versions }}
+  - pip
+  - numpy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - pre-commit
+  - dvc
+  - hydra-core
+  - mkdocs-material
+  - pytest
+  - ipykernel
+
