@@ -31,7 +31,7 @@ ini: logo
 	git branch -m main
 	@echo "Instalación de dependencias..."
 	conda env create --prefix ./env --file environment.yml
-	conda activate ./env
+	conda activate {{ cookiecutter.project_dir }}/env
 	pre-commit install
 
 ## Activa el entorno virtual con Anaconda
