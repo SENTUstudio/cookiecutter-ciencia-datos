@@ -30,12 +30,12 @@ dependencies: logo
 	git init
 	@echo "Instalación de dependencias..."
 	conda env create -f environment.yml
+	conda activate {{ cookiecutter.directory_name }}
 	pre-commit install
 
 ## Activa el entorno virtual con Poetry
 env: logo dependencies
 	@echo "Activando el entorno virtual..."
-	conda activate {{ cookiecutter.directory_name }}
 
 ## Ejecuta pruebas con pytest
 tests: logo
