@@ -28,6 +28,7 @@ help: logo
 ini: logo
 	@echo "Inicializando Git..."
 	git init
+	git branch -m main
 	@echo "Instalación de dependencias..."
 	conda env create -f environment.yml
 	conda activate {{ cookiecutter.directory_name }}
