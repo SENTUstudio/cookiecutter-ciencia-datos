@@ -25,7 +25,7 @@ help: logo
 	sort
 
 ## Inicializa Git y instala dependencias con Poetry
-dependencies: logo
+ini: logo
 	@echo "Inicializando Git..."
 	git init
 	@echo "Instalación de dependencias..."
@@ -34,8 +34,14 @@ dependencies: logo
 	pre-commit install
 
 ## Activa el entorno virtual con Poetry
-env: logo dependencies
+env: logo
 	@echo "Activando el entorno virtual..."
+	conda activate {{ cookiecutter.directory_name }}
+
+## Removiendo entorno conda
+remove-env: logo
+	@echo "Removiendo entorno conda"
+	conda remove --name {{ cookiecutter.directory_name }} --all
 
 ## Ejecuta pruebas con pytest
 tests: logo
