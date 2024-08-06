@@ -24,12 +24,6 @@ def run_command(command, capture_output=False, use_conda=False):
         sys.exit(e.returncode)
 
 
-def activate_conda():
-    """Activate conda environment."""
-    print(f"Activando el entorno Conda en {CONDA_ENV}")
-    run_command(f'conda activate "{CONDA_ENV}"', use_conda=True)
-
-
 def install_pre_commit():
     """Install pre-commit."""
     print("Instalando pre-commit")
@@ -67,7 +61,7 @@ def help():
     commands = [
         ("help", "Muestra la ayuda en pantalla"),
         ("init", "Inicializa Git e instala dependencias con Anaconda"),
-        ("env", "Activa el entorno virtual con Anaconda"),
+        ("env", "Comando para activar el entorno virtual con Anaconda"),
         ("tests", "Ejecuta pruebas con pytest"),
         ("docs", "Construye y sirve la documentación con MkDocs"),
         ("db-up", "Levanta la base de datos postgres con docker compose"),
@@ -103,6 +97,14 @@ def db_down():
     run_command("docker compose down")
 
 
+def print_activate_command():
+    """Print the command to activate the conda environment."""
+    print("Para activar el entorno Conda, ejecuta el siguiente comando en tu terminal:")
+    print(
+        f'\033[1meval "$(conda shell.bash hook)" && conda activate "{CONDA_ENV}"\033[0m'
+    )
+
+
 def main():
     if len(sys.argv) < 2:
         help()
@@ -118,7 +120,7 @@ def main():
         create_conda_env()
     elif command == "env":
         show_logo()
-        activate_conda()
+        print_activate_command()
     elif command == "tests":
         show_logo()
         run_tests()
