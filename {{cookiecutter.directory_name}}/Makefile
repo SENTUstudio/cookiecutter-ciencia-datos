@@ -48,3 +48,13 @@ docs: logo
 	mkdocs build
 	@echo "Sirviendo la documentación..."
 	mkdocs serve
+
+## Levanta la base de dato postgres con docker compose
+db-up: logo
+	@echo "Levanta la base de dato postgres con docker compose"
+	docker compose up -d
+
+## Detiene la base de datos postgres
+db-down: logo
+	@echo "Detiene la base de datos"
+	docker compose down
