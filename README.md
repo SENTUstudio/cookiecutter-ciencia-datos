@@ -23,9 +23,9 @@
 >[!WARNING]
 >## Why?
 >
->It is important to structure your data science project based on a certain standard so that your teammates can >easily maintain and modify your project.
+>It is important to structure your data science project based on a certain standard so that your teammates can easily maintain and modify your project.
 >
->This repository provides a template that incorporates best practices for creating a maintainable and >reproducible data science project.
+>This repository provides a template that incorporates best practices for creating a maintainable and reproducible data science project.
 
 ## Tools used in the project
 * [Poetry](https://python-poetry.org/): Dependency manager
