@@ -104,6 +104,12 @@ The script requires the following Python libraries:
 
 ### `run_command` Function Documentation
 
+```mermaid
+graph TD;
+    run_command["run_command(command, capture_output, use_conda)"]
+    run_command -->|Uses| CONDA_ENV["CONDA_ENV"]
+```
+
 #### Purpose
 The `run_command` function is designed to execute shell commands from within a Python script. It provides additional options to capture the output of the command and to run the command within a specified Conda environment.
 
@@ -259,6 +265,15 @@ install_pre_commit()
 ---
 ### `init` Function Documentation
 
+```mermaid
+graph TD;
+    init["init()"]
+    init -->|Calls| show_logo["show_logo()"]
+    init -->|Calls| run_command["run_command()"]
+    init -->|Calls| install_pre_commit["install_pre_commit()"]
+    install_pre_commit -->|Calls| run_command
+```
+
 #### Purpose
 The `init` function is a command-line interface (CLI) command designed to automate the initialization of a new project repository. It performs the following tasks:
 1. Initializes a Git repository in the project directory.
@@ -354,6 +369,14 @@ python manage.py init
 
 ### `env` Function Documentation
 
+```mermaid
+graph TD;
+    env["env()"]
+    env -->|Calls| show_logo["show_logo()"]
+    env -->|Calls| print_activate_command["print_activate_command()"]
+
+```
+
 #### Purpose
 The `env` function is a command-line interface (CLI) command designed to display the necessary command for activating the project's Conda environment. This is particularly useful in guiding users to correctly set up their development environment after the Conda environment has been created.
 
@@ -366,7 +389,7 @@ def env():
 
 ##### Decorator
 
-- **`@app.command()`**:  
+- **`@app.command()`**:
   This decorator, provided by the `typer` library, marks the `env` function as a command within the CLI application. Users can execute this command from the terminal to get instructions on how to activate the Conda environment.
 
 <details>
@@ -421,6 +444,13 @@ python manage.py env
 
 ---
 ### `tests` Function Documentation
+
+```mermaid
+graph TD;
+    tests["tests()"]
+    tests -->|Calls| show_logo["show_logo()"]
+    tests -->|Calls| run_command["run_command()"]
+```
 
 #### Purpose
 The `tests` function is a command-line interface (CLI) command designed to automate the process of running tests in a project using `pytest`. This function ensures that tests are executed within the correct Conda environment, which contains all the necessary dependencies for the testing process.
@@ -496,9 +526,14 @@ python manage.py tests
 >- This function is typically used as part of a continuous integration (CI) pipeline or during the development process to verify that the code works as expected.
 
 ---
-
-
 ### `docs` Function Documentation
+
+```mermaid
+graph TD;
+    docs["docs()"]
+    docs -->|Calls| show_logo["show_logo()"]
+    docs -->|Calls| run_command["run_command()"]
+```
 
 #### Purpose
 The `docs` function is a command-line interface (CLI) command designed to automate the process of building and serving project documentation using MkDocs. MkDocs is a static site generator that's geared towards creating project documentation, making it easy to write and maintain documentation in Markdown. This function ensures that the documentation is built and served within the correct Conda environment, where all dependencies are properly managed.
@@ -582,8 +617,14 @@ python manage.py docs
 >- It is recommended to run this function during or after significant updates to the documentation to ensure that all changes are correctly built and reflected in the served site.
 
 ---
-
 ### `db_up` Function Documentation
+
+```mermaid
+graph TD;
+    db_up["db_up()"]
+    db_up -->|Calls| show_logo["show_logo()"]
+    db_up -->|Calls| run_command["run_command()"]
+```
 
 #### Purpose
 The `db_up` function is a command-line interface (CLI) command designed to start a PostgreSQL database using Docker Compose. Docker Compose is a tool that allows users to define and manage multi-container Docker applications, including databases, through simple configuration files. This function automates the process of bringing up the PostgreSQL database container, making it easier to start the database as part of the project setup or development workflow.
@@ -667,6 +708,13 @@ python manage.py db_up
 
 ### `db_down` Function Documentation
 
+```mermaid
+graph TD;
+    db_down["db_down()"]
+    db_down -->|Calls| show_logo["show_logo()"]
+    db_down -->|Calls| run_command["run_command()"]
+```
+
 #### Purpose
 The `db_down` function is a command-line interface (CLI) command designed to stop and remove the PostgreSQL database container using Docker Compose. Docker Compose is a tool that allows users to manage multi-container Docker applications, including databases. This function automates the process of shutting down the PostgreSQL database, ensuring that all associated containers are properly stopped and cleaned up.
 
@@ -749,6 +797,12 @@ python manage.py db_down
 
 ### `show_logo` Function Documentation
 
+```mermaid
+graph TD;
+    show_logo["show_logo()"]
+    show_logo -->|Prints| logo["ASCII Art Logo"]
+```
+
 #### Purpose
 The `show_logo` function is designed to display an ASCII art logo representing the project. This logo serves as a visual identifier, providing a consistent and recognizable element for users whenever the function is called. It is typically used at the start of CLI commands to create a branded user experience and to visually indicate that the project-specific script is running.
 
@@ -821,6 +875,13 @@ show_logo()
 ---
 
 ### `print_activate_command` Function Documentation
+
+```mermaid
+graph TD;
+    print_activate_command["print_activate_command()"]
+    print_activate_command -->|Prints| activation_command["Activation Command"]
+
+```
 
 #### Purpose
 The `print_activate_command` function is designed to provide users with the exact command needed to activate the Conda environment associated with a project. This function is particularly useful in guiding users who may not be familiar with Conda or the specific steps required to activate the environment in their terminal.
