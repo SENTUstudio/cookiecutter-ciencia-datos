@@ -20,11 +20,12 @@
 - [Project Structure](#project-structure)
 - [How to use this project](#how-to-use-this-project)
 
-## Why?
-
-It is important to structure your data science project based on a certain standard so that your teammates can easily maintain and modify your project.
-
-This repository provides a template that incorporates best practices for creating a maintainable and reproducible data science project.
+>[!WARNING]
+>## Why?
+>
+>It is important to structure your data science project based on a certain standard so that your teammates can >easily maintain and modify your project.
+>
+>This repository provides a template that incorporates best practices for creating a maintainable and >reproducible data science project.
 
 ## Tools used in the project
 * [Poetry](https://python-poetry.org/): Dependency manager
@@ -678,7 +679,7 @@ def db_down():
 
 ##### Decorator
 
-- **`@app.command()`**:  
+- **`@app.command()`**:
   This decorator, provided by the `typer` library, registers the `db_down` function as a command within the CLI application. Users can invoke this command from the terminal to stop the PostgreSQL database using Docker Compose.
 
 <details>
