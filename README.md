@@ -315,7 +315,7 @@ def init():
 To initialize a new project, a user would execute the following command in the terminal:
 
 ```bash
-python script_name.py init
+python manage.py init
 ```
 
 - This command will:
@@ -393,7 +393,7 @@ def env():
 To display the Conda environment activation command, a user would run the following command in the terminal:
 
 ```bash
-python script_name.py env
+python manage.py env
 ```
 
 - This command will:
@@ -464,7 +464,7 @@ def tests():
 To run the project's test suite, a user would execute the following command in the terminal:
 
 ```bash
-python script_name.py tests
+python manage.py tests
 ```
 
 - This command will:
@@ -547,7 +547,7 @@ def docs():
 To build and serve the project's documentation, a user would execute the following command in the terminal:
 
 ```bash
-python script_name.py docs
+python manage.py docs
 ```
 
 - This command will:
@@ -627,7 +627,7 @@ def db_up():
 To start the PostgreSQL database using Docker Compose, a user would execute the following command in the terminal:
 
 ```bash
-python script_name.py db_up
+python manage.py db_up
 ```
 
 - This command will:
@@ -708,7 +708,7 @@ def db_down():
 To stop the PostgreSQL database using Docker Compose, a user would execute the following command in the terminal:
 
 ```bash
-python script_name.py db_down
+python manage.py db_down
 ```
 
 - This command will:
@@ -920,7 +920,7 @@ The script uses the `typer` library to create a simple and intuitive CLI. The fo
 To use this script, save it as a `.py` file in your project directory and execute it with the desired command. For example:
 
 ```bash
-python script_name.py init
+python manage.py init
 ```
 
 This will initialize the Git repository and install all dependencies.
