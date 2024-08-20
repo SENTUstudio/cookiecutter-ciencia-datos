@@ -221,6 +221,7 @@ def install_pre_commit():
 
 </summary>
 
+---
 ##### 1. **Printing Status Message**:
    - The function begins by printing a message to the console: `"Installing pre-commit..."`. This informs the user that the process of installing `pre-commit` hooks is starting.
 
@@ -230,7 +231,7 @@ def install_pre_commit():
    - `pre-commit install`:
      - This command sets up the pre-commit hooks for the repository by creating the necessary configuration files and linking the hooks to Git.
      - Once installed, these hooks will automatically run specified checks and validations (e.g., code formatting, linting, security checks) before any commit is made.
-
+---
 </details>
 
 #### Example Usage
@@ -292,6 +293,7 @@ def init():
 
 </summary>
 
+---
 ##### 1. **Displaying the Project Logo**:
    - The function starts by calling `show_logo()`, which displays an ASCII logo or banner representing the project. This provides a visual identifier for the project during the setup process, making it clear to the user that the initialization is starting.
 
@@ -308,7 +310,7 @@ def init():
 
 ##### 4. **Installing Pre-commit Hooks**:
    - After the Conda environment is created, the function calls `install_pre_commit()` to set up `pre-commit` hooks. These hooks will automatically run checks (e.g., linting, code formatting) before any commit is made, helping to maintain code quality and consistency throughout the project.
-
+---
 </details>
 
 #### Example Usage
@@ -380,13 +382,14 @@ def env():
 
 </summary>
 
+---
 ##### 1. **Displaying the Project Logo**:
    - The function begins by calling `show_logo()`, which displays an ASCII logo or banner representing the project. This is a visual element that helps users identify the project and provides a consistent user experience when using the CLI.
 
 ##### 2. **Printing the Activation Command**:
    - The function then calls `print_activate_command()`, which prints the specific command that the user needs to run in their terminal to activate the Conda environment.
    - This activation command is essential for users to ensure that they are working within the correct Conda environment, which contains all the dependencies and configurations specified for the project.
-
+---
 </details>
 
 #### Example Usage
@@ -447,6 +450,7 @@ def tests():
 
 </summary>
 
+---
 ##### 1. **Displaying the Project Logo**:
    - The function begins by calling `show_logo()`, which displays an ASCII logo or banner representing the project. This provides a consistent and recognizable visual element to the user, indicating that the test execution process is starting.
 
@@ -457,7 +461,7 @@ def tests():
    - The function calls `run_command("pytest", use_conda=True)` to execute the `pytest` testing framework within the Conda environment specified by the global variable `CONDA_ENV`.
    - `pytest` is a powerful testing framework for Python that simplifies the process of writing and running tests. It can discover and execute tests automatically based on a set of naming conventions.
    - The `use_conda=True` argument ensures that the `pytest` command is run within the appropriate Conda environment, where all the project's dependencies are installed.
-
+---
 </details>
 
 #### Example Usage
@@ -524,6 +528,7 @@ def docs():
 
 </summary>
 
+---
 ##### 1. **Displaying the Project Logo**:
    - The function starts by calling `show_logo()`, which displays an ASCII logo or banner representing the project. This visual element gives a consistent and professional appearance to the user, indicating that the documentation process is starting.
 
@@ -540,7 +545,7 @@ def docs():
      - `mkdocs serve`:
        - This command starts a local web server, making the documentation accessible via a web browser at `http://localhost:8000` by default.
        - The documentation is automatically rebuilt and refreshed in the browser when changes are detected in the source files, which is particularly useful during the writing and editing process.
-
+---
 </details>
 
 #### Example Usage
@@ -608,6 +613,7 @@ def db_up():
 
 </summary>
 
+---
 ##### 1. **Displaying the Project Logo**:
    - The function begins by calling `show_logo()`, which displays an ASCII logo or banner representing the project. This provides a consistent and recognizable visual element to the user, indicating that the process of starting the database is beginning.
 
@@ -620,7 +626,7 @@ def db_up():
        - This command starts the services defined in the Docker Compose file (`docker-compose.yml`) in detached mode (i.e., running in the background).
        - The PostgreSQL service, as defined in the `docker-compose.yml` file, will be started, initializing the database and making it available for use by the application or developers.
        - Running the command in detached mode allows the terminal to be freed up for other tasks while the database runs in the background.
-
+---
 </details>
 
 #### Example Usage
@@ -689,6 +695,7 @@ def db_down():
 
 </summary>
 
+---
 ##### 1. **Displaying the Project Logo**:
    - The function begins by calling `show_logo()`, which displays an ASCII logo or banner representing the project. This provides a consistent and recognizable visual element to the user, indicating that the process of stopping the database is beginning.
 
@@ -701,7 +708,7 @@ def db_down():
        - This command stops and removes all the containers, networks, and volumes associated with the services defined in the `docker-compose.yml` file.
        - Specifically, for the PostgreSQL service, this command stops the running database container and removes it, freeing up resources on the host machine.
        - This command ensures that the database and any related services are completely shut down and cleaned up.
-
+---
 </details>
 
 #### Example Usage
@@ -761,6 +768,8 @@ def show_logo():
 <summary>
 #### Detailed Description
 </summary>
+
+---
 ##### 1. **Creating the ASCII Art Logo**:
    - The function defines a multi-line string named `logo` that contains the ASCII art.
    - The logo is designed using special characters and includes color codes to enhance its appearance in the terminal.
@@ -786,7 +795,7 @@ When the function is executed, the following logo is displayed in the terminal (
 ▄█ ██▄ █░▀█ ░█░ █▄█  ┖┤ with Python on  Archlinux ├┚
                 .studio
 ```
-
+---
 </details>
 
 #### Example Usage
@@ -835,6 +844,7 @@ def print_activate_command():
 
 </summary>
 
+---
 ##### 1. **Printing the Activation Instruction**:
    - The function begins by printing a clear and instructive message to the console:
      - `"To activate the Conda environment, run the following command in your terminal:"`
@@ -874,7 +884,7 @@ When the function is executed, the following output will be displayed in the ter
 To activate the Conda environment, run the following command in your terminal:
 eval conda activate ./env
 ```
-
+---
 </details>
 
 #### Dependencies
