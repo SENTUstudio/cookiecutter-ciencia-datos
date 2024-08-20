@@ -13,12 +13,6 @@
 [![License](https://img.shields.io/github/license/SENTUstudio/cookiecutter-ciencia-datos.svg)](LICENSE.md)
 
 </div>
-📝 Table of Contents
-
-- [Why?](#why)
-- [Tools used in the project](#tools-used-in-the-project)
-- [Project Structure](#project-structure)
-- [How to use this project](#how-to-use-this-project)
 
 >[!WARNING]
 >## Why?
